@@ -120,14 +120,20 @@ app.get("/api/tickets/:id", async (req, res) => {
   }
 });
 
-// ✅ جلب التذاكر حسب رقم الجوال
+// ✅ جلب التذاكر حسب رقم الجوال (مع التطبيع)
 app.get("/api/tickets", async (req, res) => {
   try {
-    const contact = req.query.contact;
+    const contact = (req.query.contact || "").trim();
     const tickets = await getAllTickets();
 
     if (contact) {
-      const filtered = tickets.filter((t) => t.contact === contact);
+      const normalize = (num) =>
+        num ? num.replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).trim() : "";
+
+      const filtered = tickets.filter(
+        (t) => normalize(t.contact) === normalize(contact)
+      );
+
       return res.json({ tickets: filtered });
     }
 
