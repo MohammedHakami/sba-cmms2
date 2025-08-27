@@ -153,9 +153,10 @@ function Requester() {
             <label>{t.category}
               <select name="category" onChange={handleChange} style={{ width: "100%", padding: 10, borderRadius: 6, border: "1px solid #ccc" }}>
                 <option value="">{t.category}</option>
+                <option value="Netia">Netia</option>
+                <option value="Electronics">Electronics</option>
                 <option value="Electrical">Electrical</option>
                 <option value="Mechanical">Mechanical</option>
-                <option value="Plumbing">Plumbing</option>
                 <option value="General">General</option>
               </select>
             </label>

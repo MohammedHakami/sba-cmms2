@@ -1,20 +1,13 @@
+/* في App.css أو index.css */
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 51, 102, 0.8),   /* أزرق داكن شفاف */
-    rgba(0, 102, 51, 0.8)    /* أخضر شفاف */
-  );
-  color: #ffffff;                 /* نص أبيض */
+  background: transparent;   /* بدون خلفية */
+  color: black;              /* الكريدت باللون الأسود */
   text-align: center;
-  padding: 12px;
-  font-size: 13px;
-  font-weight: 500;
-  backdrop-filter: blur(6px);      /* تأثير زجاجي */
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 1000;
-  letter-spacing: 0.5px;
+  padding: 5px;
+  font-size: 12px;
+  z-index: 1000;             /* يضمن ظهوره */
 }
