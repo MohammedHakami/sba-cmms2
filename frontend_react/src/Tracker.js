@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const API_BASE = "http://localhost:3001/api";
+const API_BASE = "https://sba-cmms.onrender.com/api";
 
 // 🌍 Translations
 const translations = {

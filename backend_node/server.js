@@ -120,6 +120,24 @@ app.get("/api/tickets/:id", async (req, res) => {
   }
 });
 
+// ✅ جلب التذاكر حسب رقم الجوال
+app.get("/api/tickets", async (req, res) => {
+  try {
+    const contact = req.query.contact;
+    const tickets = await getAllTickets();
+
+    if (contact) {
+      const filtered = tickets.filter((t) => t.contact === contact);
+      return res.json({ tickets: filtered });
+    }
+
+    res.json({ tickets });
+  } catch (err) {
+    console.error("❌ Error fetching tickets by contact", err);
+    res.status(500).json({ ok: false });
+  }
+});
+
 // ✅ تحديث تذكرة (status / notes / etc)
 app.patch("/api/tickets/:id", async (req, res) => {
   try {

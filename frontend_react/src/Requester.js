@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-const API_BASE = "http://localhost:3001/api";
+
+// 🔗 رابط الـ Backend الجديد
+const API_BASE = "https://sba-cmms.onrender.com/api";
 
 // 🔢 Normalize Arabic digits to English
 const normalizeDigits = (input) => {

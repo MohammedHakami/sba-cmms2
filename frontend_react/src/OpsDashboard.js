@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const API_BASE = "http://localhost:3001/api";
+const API_BASE = "https://sba-cmms.onrender.com/api";
+
 const ADMIN_PASS = "admin123"; // change later
 
 // 🌍 Translations
