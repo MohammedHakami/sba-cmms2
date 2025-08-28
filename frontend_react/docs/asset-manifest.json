@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sba-cmms/static/css/main.a469dc0f.css",
+    "main.js": "/sba-cmms/static/js/main.9dc9ce32.js",
+    "index.html": "/sba-cmms/index.html",
+    "main.a469dc0f.css.map": "/sba-cmms/static/css/main.a469dc0f.css.map",
+    "main.9dc9ce32.js.map": "/sba-cmms/static/js/main.9dc9ce32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a469dc0f.css",
+    "static/js/main.9dc9ce32.js"
+  ]
+}
